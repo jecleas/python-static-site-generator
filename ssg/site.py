@@ -3,7 +3,8 @@ from pathlib import Path
 class Site:
 
     def __init__(self, source, dest):
-        self.source, self.dest = source.Path(), dest.Path()
+        self.source = source.Path()
+        self.dest = dest.Path()
 
     def create_dir(self, path):   
         directory = self.dest / path.relative_to(self.source)
